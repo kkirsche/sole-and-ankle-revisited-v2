@@ -17,14 +17,22 @@ export const WEIGHTS = {
   bold: 800,
 };
 
+/*
+  All units in pixels. Using a desktop-first approach
+
+  <=600px -> phone
+  601px–950px-> tablet
+  951px–1300px -> laptop
+  >=1301px -> desktop
+*/
 export const BREAKPOINTS = {
-	tabletMin: 550,   // pixels
-	laptopMin: 1100,  // pixels
-	desktopMin: 1500, // pixels
+	phone: 600,
+	tablet: 950,
+	laptop: 1300,
 }
 
 export const QUERIES = {
-	'tabletAndUp': `(min-width: ${BREAKPOINTS.tabletMin / 16}/rem)`,
-	'laptopAndUp': `(min-width: ${BREAKPOINTS.laptopMin / 16}/rem)`,
-	'desktopAndUp': `(min-width: ${BREAKPOINTS.desktopMin / 16}/rem)`,
+	phoneAndDown: `(max-width: ${BREAKPOINTS.phone / 16}rem)`,
+	tabletAndDown: `(max-width: ${BREAKPOINTS.tablet / 16}rem)`,
+	laptopAndDown: `(max-width: ${BREAKPOINTS.laptop / 16}rem)`,
 }
