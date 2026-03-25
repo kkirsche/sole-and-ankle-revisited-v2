@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { QUERIES } from '../../constants';
-import Header from '../Header';
-import ShoeIndex from '../ShoeIndex';
+import { QUERIES } from "../../constants";
+import Header from "../Header";
+import ShoeIndex from "../ShoeIndex";
 
 const App = () => {
-  const [sortId, setSortId] = React.useState('newest');
+  const [sortId, setSortId] = React.useState("newest");
 
   return (
     <>

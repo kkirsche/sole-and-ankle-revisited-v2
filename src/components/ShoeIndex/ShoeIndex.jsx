@@ -22,19 +22,21 @@ const ShoeIndex = ({ sortId, setSortId }) => {
       <MainColumn>
         <Header>
           <div>
-          <MobileBreadcrumbs>
-            <ShoeBreadcrumbs />
-          </MobileBreadcrumbs>
-          <Title>Running</Title></div>
+            <MobileBreadcrumbs>
+              <ShoeBreadcrumbs />
+            </MobileBreadcrumbs>
+            <Title>Running</Title>
+          </div>
           <SortFilterWrapper>
-          <Select
-            label="Sort"
-            value={sortId}
-            onChange={(ev) => setSortId(ev.target.value)}
-          >
-            <option value="newest">Newest Releases</option>
-            <option value="price">Price</option>
-          </Select></SortFilterWrapper>
+            <Select
+              label="Sort"
+              value={sortId}
+              onChange={(ev) => setSortId(ev.target.value)}
+            >
+              <option value="newest">Newest Releases</option>
+              <option value="price">Price</option>
+            </Select>
+          </SortFilterWrapper>
         </Header>
         <Spacer size={32} />
         <ShoeGrid />
@@ -61,7 +63,7 @@ const SortFilterWrapper = styled.div`
   @media ${QUERIES.phoneAndDown} {
     display: none;
   }
-`
+`;
 
 const LeftColumn = styled.div`
   flex-basis: 248px;

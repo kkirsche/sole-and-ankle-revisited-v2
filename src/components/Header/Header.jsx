@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { COLORS, QUERIES, WEIGHTS } from '../../constants';
-import Icon from '../Icon';
-import Logo from '../Logo';
-import MobileMenu from '../MobileMenu';
-import SuperHeader from '../SuperHeader';
-import UnstyledButton from '../UnstyledButton';
-import VisuallyHidden from '../VisuallyHidden';
+import { COLORS, QUERIES, WEIGHTS } from "../../constants";
+import Icon from "../Icon";
+import Logo from "../Logo";
+import MobileMenu from "../MobileMenu";
+import SuperHeader from "../SuperHeader";
+import UnstyledButton from "../UnstyledButton";
+import VisuallyHidden from "../VisuallyHidden";
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
@@ -33,11 +33,20 @@ const Header = () => {
           <NavLink href="/collections">Collections</NavLink>
         </DesktopNav>
         <MobileActions>
-          <ShoppingBagButton><Icon id="shopping-bag" /><VisuallyHidden>Open cart</VisuallyHidden></ShoppingBagButton>
-          <UnstyledButton><Icon id="search" /><VisuallyHidden>Open cart</VisuallyHidden></UnstyledButton>
-          <UnstyledButton><Icon id="menu" /><VisuallyHidden>Open cart</VisuallyHidden></UnstyledButton>
+          <ShoppingBagButton>
+            <Icon id="shopping-bag" />
+            <VisuallyHidden>Open cart</VisuallyHidden>
+          </ShoppingBagButton>
+          <UnstyledButton>
+            <Icon id="search" />
+            <VisuallyHidden>Open cart</VisuallyHidden>
+          </UnstyledButton>
+          <UnstyledButton>
+            <Icon id="menu" />
+            <VisuallyHidden>Open cart</VisuallyHidden>
+          </UnstyledButton>
         </MobileActions>
-        <Filler/>
+        <Filler />
       </MainHeader>
 
       <MobileMenu
@@ -63,7 +72,7 @@ const MainHeader = styled.div`
   }
 
   @media ${QUERIES.phoneAndDown} {
-    padding-inline: 16px
+    padding-inline: 16px;
   }
 `;
 
