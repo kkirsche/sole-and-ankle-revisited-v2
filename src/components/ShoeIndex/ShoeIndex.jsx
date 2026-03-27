@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { QUERIES, WEIGHTS } from "../../constants";
+import { QUERIES } from "../../constants";
 
 import Breadcrumbs from "../Breadcrumbs";
 import Select from "../Select";
@@ -89,7 +89,7 @@ const Header = styled.header`
 
 const Title = styled.h2`
   font-size: 1.5rem;
-  font-weight: ${WEIGHTS.medium};
+  font-weight: var(--weight-medium);
 `;
 
 const DesktopBreadcrumbs = styled.div`
